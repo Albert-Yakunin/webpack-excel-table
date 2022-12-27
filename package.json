@@ -5,8 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack",
-    "build": "webpack --mode production"
+    "start": "cross-env NODE_ENV=development webpack",
+    "build": "cross-env NODE_ENV=production webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.3"
   }
 }
